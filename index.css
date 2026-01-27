@@ -1,0 +1,112 @@
+@font-face {
+  font-family: outfit-regular;
+  src: url(assets/fonts/Outfit/static/Outfit-regular.ttf);
+}
+@font-face {
+  font-family: outfit-semiBold;
+  src: url(assets/fonts/Outfit/static/Outfit-semiBold.ttf);
+}
+@font-face {
+  font-family: outfit-thin;
+  src: url(assets/fonts/Outfit/static/Outfit-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Blue-500: hsl(215, 51%, 70%);
+  --Cyan-400: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --ft-size: 18px;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+  --br-out: 1em;
+  --br-in: 0.7em;
+}
+body {
+  font-size: var(--ft-size);
+  font-weight: var(--fw-400);
+  font-family: outfit-thin, sans-serif;
+  background: var(--main-bg);
+}
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18em;
+  background: var(--card-bg);
+  border-radius: var(--br-out);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  box-shadow:
+    1em 2em 1em hsla(217, 51%, 8%, 0.403),
+    -1em 2em 1em hsla(217, 51%, 8%, 0.403);
+}
+
+main > img {
+  width: 100%;
+  border-radius: var(--br-in);
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: var(--Blue-500);
+}
+.desc .header {
+  color: var(--White);
+  font-weight: var(--fw-600);
+}
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail small {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-family: outfit-regular, sans-serif;
+}
+
+.detail small:first-child {
+  color: var(--Cyan-400);
+  font-weight: var(--fw-400);
+  font-family: outfit-semibold, sans-serif;
+}
+hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background: var(--line);
+  margin-top: 0.2em;
+}
+footer {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+  color: var(--Blue-500);
+  font-family: outfit-regular, sans-serif;
+  padding-bottom: 10px;
+}
+
+footer img {
+  width: 10%;
+  border-radius: 100%;
+  padding: 1px;
+  background: var(--White);
+}
+footer .name {
+  color: var(--White);
+}
